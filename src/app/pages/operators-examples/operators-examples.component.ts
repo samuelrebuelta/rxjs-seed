@@ -23,10 +23,10 @@ export class OperatorsExamplesComponent implements AfterViewInit, OnDestroy {
     // this.distinctUntilChangedOperator();
     // this.distinctUntilKeyChangedOperator();
     // this.throttleTimeOperator();
-    // this.debounceTime();
     // this.startWithOperator();
 
-    // this.setClickSubscription();
+    this.debounceTime();
+    this.setClickSubscription();
   }
 
   private filterOperator() {
