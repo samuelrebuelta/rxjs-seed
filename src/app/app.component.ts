@@ -18,6 +18,6 @@ export class AppComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.showLoading$ = this.requestService.showLoading$;
+    this.showLoading$ = this.requestService.getLoadingStatus();
   }
 }

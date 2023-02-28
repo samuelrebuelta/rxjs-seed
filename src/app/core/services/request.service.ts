@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, Subject, throwError } from 'rxjs';
-import { catchError, tap } from 'rxjs/operators';
+import { catchError, delay, tap } from 'rxjs/operators';
 
 
 @Injectable({ providedIn: 'root' })
@@ -36,5 +36,14 @@ export class RequestService {
         })
       );
     };
+  }
+
+
+
+
+
+  // TODO: Remove delay
+  public getLoadingStatus() {
+    return this.showLoading$.pipe(delay(100));
   }
 }
